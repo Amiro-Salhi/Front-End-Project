@@ -1,49 +1,67 @@
 body {
   margin: 0;
-  padding: 0;
-  background-image: url(../Images/Background-Image.JPEG);
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-image: url('../Images/Background-Image.JPEG');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-h2{
-    color: slateblue;
-    text-align: center;
+
+h2, h3 {
+  text-align: center;
 }
 
-p{
-    color: blueviolet;
-    text-align: center;
-}
+h2 { color: slateblue; }
+h3 { color: purple; }
 
-h2, p {
+p {
+  color: blueviolet;
+  text-align: center;
   margin: 10px;
 }
 
-img{
-  align-items: center;
-  margin-left: 595px;
+
+img {
+  display: block;
+  margin: 0 auto;          
+  max-width: 100%;         
+  height: auto;
   border-radius: 25px;
 }
 
-.container{
+
+.container {
   background-color: orange;
   color: blueviolet;
   border-radius: 10px;
-  align-items: center;
   text-align: center;
-  margin-right: 300px;
-  margin-left: 300px;
+
+  max-width: 800px;
+  margin: 20px auto;      
+  padding: 15px;
 }
 
+
 ul {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: orange;
+  width: 100%;
+}
+
+body {
+  margin: 0;
 }
 
 ul li {
-  float: left;
+  float: none; 
 }
 
 ul li a {
@@ -58,9 +76,79 @@ ul li a:hover {
   background-color: red;
 }
 
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: blueviolet;
+  color: orange;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: purple;
+}
+
+.container2 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
 footer {
   background-color: orange;
   padding: 10px;
   text-align: center;
   color: lightseagreen;
+}
+
+@media (max-width: 480px) {
+
+  html {
+    font-size: 85%; 
+  }
+
+  body {
+    overflow-x: hidden;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  img {
+    width: 70%;
+    margin: 15px auto;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul li a {
+    width: 100%;
+    padding: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
