@@ -37,12 +37,19 @@ var x = setInterval(function() {
 }, 1000);
 
 function openForm() {
-  console.log("Form geopend");
-  document.getElementById("myForm").style.display = "block";
+  // 1. Show the chat popup window
+  document.getElementById("myForm").style.display = "block"; 
+  
+  // 2. Hide the main chat button so it doesn't overlap
+  document.querySelector(".open-button").style.display = "none";
 }
 
 function closeForm() {
+  // 1. Hide the chat popup window
   document.getElementById("myForm").style.display = "none";
+  
+  // 2. Bring back the main chat button cleanly
+  document.querySelector(".open-button").style.display = "block";
 }
 
 const time = new Date().getHours();
@@ -55,3 +62,33 @@ if (time < 12) {
   greeting = "Goedenavond";
 }
 document.getElementById("demo2").innerHTML = greeting;
+
+
+// 1. Grab the button and the body elements from the DOM
+const themeToggleBtn = document.getElementById('theme-toggle');
+const bodyElement = document.body;
+
+// 2. Check localStorage when the page loads to see if they chose dark mode before
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme === 'dark') {
+  bodyElement.classList.add('dark-theme');
+  themeToggleBtn.textContent = 'Switch to Light Mode';
+}
+
+// 3. Add an event listener to handle the click event
+themeToggleBtn.addEventListener('click', () => {
+  // Toggle the class on the body
+  bodyElement.classList.toggle('dark-theme');
+  
+  // Check if the body now has the dark theme active
+  if (bodyElement.classList.contains('dark-theme')) {
+    // Save preference to localStorage and update button text
+    localStorage.setItem('theme', 'dark');
+    themeToggleBtn.textContent = 'Switch to Light Mode';
+  } else {
+    // Remove preference from localStorage and update button text
+    localStorage.setItem('theme', 'light');
+    themeToggleBtn.textContent = 'Switch to Dark Mode';
+  }
+});

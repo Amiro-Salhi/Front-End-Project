@@ -1,28 +1,126 @@
+:root {
+  --text-color: blueviolet;
+  --accent-color: orange; 
+  --heading-1: slateblue;
+  --heading-2: purple;
+  --bg-container: orange;
+  --bg-container2: #f2f2f2;
+  --text-container2: #333333;
+  --bg-filter: none;
+  --bg-overlay: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+  
+  /* New variables for form readability */
+  --form-label-color: #000000;    /* Black text for light mode */
+  --btn-text-color: orange;       /* Orange text on purple buttons */
+}
+
+.dark-theme {
+  --text-color: #e0d0ff;       
+  --accent-color: #ff9d42;     
+  --heading-1: #9d85ff;        
+  --heading-2: #dca6ff;        
+  --bg-container: #2c1a4d;     
+  --bg-container2: #1e1e1e;    
+  --text-container2: #f2f2f2;  
+  --bg-overlay: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  --bg-filter: brightness(0.8) contrast(1.1);
+
+  /* New dark mode colors for readability */
+  --form-label-color: #e0d0ff;    /* Light purple text for labels */
+  --btn-text-color: #2c1a4d;      /* Dark purple text so it pops on light buttons */
+}
+
+.dark-theme {
+  /* ... your other dark theme variables ... */
+  --heading-2: #dca6ff;        /* Light lavender button color */
+  --btn-text-color: #2c1a4d;   /* Dark purple text color for high contrast */
+}
+
+
+/* Update the label/text container color */
+.form-container {
+  max-width: 270px;
+  padding: 10px;
+  background-color: var(--bg-container);
+  color: var(--form-label-color); /* Fixes "Message" text visibility */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Update the Send button text color */
+.form-container .btn {
+  background-color: var(--heading-2);
+  color: var(--btn-text-color); /* Fixes "Send" text visibility */
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 10px;
+  font-weight: bold; /* Makes text thicker and easier to read */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 
-  background-image: url('../Images/Background-Image.JPEG');
+  background-image: var(--bg-overlay), url('../Images/Background-Image.JPEG');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  
+  /* REMOVE the 'filter: var(--bg-filter);' line here if it is present */
+  
+  transition: background 0.3s ease; /* Transition just the background tint */
 }
+
+* {
+  box-sizing: border-box;
+}
+
+/* Dedicated styling for the dark mode toggle */
+.theme-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 99999 !important; /* Forces it to stay above all elements while scrolling */
+  
+  background-color: var(--heading-2);
+  color: var(--btn-text-color) !important; /* Forces the deep dark purple text */
+  padding: 10px 15px;
+  font-weight: bold;
+  border: 2px solid var(--text-color);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 
 
 h1, h2 {
   text-align: center;
+  transition: color 0.3s ease;
 }
 
-h1 { color: slateblue; }
-h2 { color: purple; }
+h1 { color: var(--heading-1); }
+h2 { color: var(--heading-2); }
 
 p {
-  color: blueviolet;
+  color: var(--text-color);
   text-align: center;
   margin: 10px;
+  transition: color 0.3s ease;
 }
-
 
 img {
   display: block;
@@ -32,31 +130,27 @@ img {
   border-radius: 25px;
 }
 
-
 .container {
-  background-color: orange;
-  color: blueviolet;
+  background-color: var(--bg-container);
+  color: var(--text-color);
   border-radius: 10px;
   text-align: center;
-
   max-width: 800px;
   margin: 20px auto;      
   padding: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 nav ul {
   list-style: none;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: var(--bg-container);
   width: 100%;
-}
-
-body {
-  margin: 0;
+  transition: background-color 0.3s ease;
 }
 
 ul li {
@@ -65,16 +159,16 @@ ul li {
 
 ul li a {
   display: block;
-  color: slateblue;
+  color: var(--heading-1);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 ul li a:hover {
   background-color: red;
 }
-
 
 input[type=text], select, textarea {
   width: 98%;
@@ -86,66 +180,123 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: blueviolet;
-  color: orange;
+  background-color: var(--text-color);
+  color: var(--accent-color);
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.demo{
+.demo {
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
 }
 
 input[type=submit]:hover {
-  background-color: purple;
+  background-color: var(--heading-2);
 }
 
 .container2 {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: var(--bg-container2);
+  color: var(--text-container2);
   padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
+/* Chat Popup Styles */
 /* Button used to open the chat form - fixed at the bottom of the page */
+/* Update the Open button to make text readable */
 .open-button {
-  background-color: purple;
-  color: orange;
+  background-color: var(--heading-2);
+  color: var(--btn-text-color) !important; /* Forces dark purple text */
   padding: 16px 20px;
-  border: none;
+  border: 2px solid var(--text-color);
+  font-weight: bold;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
   position: fixed;
   bottom: 23px;
   right: 28px;
   width: 180px;
   border-radius: 10px;
+  z-index: 999;
+  transition: all 0.3s ease;
 }
 
-/* The popup chat - hidden by default */
+/* Force dark text color on the close button text inside the form */
+.form-container .cancel {
+  background-color: red;
+  color: #ffffff !important; /* Force crisp white text on the red button */
+  font-weight: bold;
+}
+
+/* Update the Send button style for perfect readability */
+.form-container .btn {
+  background-color: var(--heading-2);
+  color: var(--btn-text-color) !important; /* Forces dark purple text in dark mode */
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  border-radius: 10px;
+  font-weight: bold; /* Makes the text thick and crisp */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fix placeholder text contrast for all modern browsers */
+.form-container textarea::placeholder {
+  color: #555555 !important; /* Dark charcoal gray for clear readability */
+  opacity: 1 !important;     /* Overrides browser defaults that fade it out */
+}
+
+/* Fallback for older WebKit browsers (Safari/Chrome) */
+.form-container textarea::-webkit-input-placeholder {
+  color: #555555 !important;
+  opacity: 1 !important;
+}
+
+/* Zorgt voor donkere, leesbare letters wanneer je typt */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  color: #222222 !important; /* Forceert donkergrijze letters bij het typen */
+  font-size: 16px;
+  resize: none;
+  min-height: 200px;
+}
+
+
+.open-button:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+
 .chat-popup {
   display: none;
   position: fixed;
   bottom: 0;
   right: 15px;
-  border: 3px solid blueviolet;
+  border: 3px solid var(--text-color);
   z-index: 9;
 }
 
-/* Add styles to the form container */
 .form-container {
   max-width: 270px;
   padding: 10px;
-  background-color: orange;
+  background-color: var(--bg-container);
+  transition: background-color 0.3s ease;
 }
 
-/* Full-width textarea */
 .form-container textarea {
   width: 100%;
   padding: 15px;
@@ -156,16 +307,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
   min-height: 200px;
 }
 
-/* When the textarea gets focus, do something */
 .form-container textarea:focus {
   background-color: white;
   outline: none;
 }
 
-/* Set a style for the submit/send button */
 .form-container .btn {
-  background-color: purple;
-  color: orange;
+  background-color: var(--heading-2);
+  color: var(--accent-color);
   padding: 16px 20px;
   border: none;
   cursor: pointer;
@@ -175,43 +324,31 @@ body {font-family: Arial, Helvetica, sans-serif;}
   border-radius: 10px;
 }
 
-/* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
 }
 
-/* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
 
 footer {
-  background-color: orange;
+  background-color: var(--bg-container);
   padding: 10px;
   text-align: center;
   color: lightseagreen;
+  transition: background-color 0.3s ease;
 }
 
-
+/* Responsive Styles */
 @media (max-width: 480px) {
-
   html {
     font-size: 110%; 
   }
-
-  h1{
-    text-align: center;
-  }
-
-  nav{
-    text-align: center;
-  }
-
   body {
     overflow-x: hidden;
     width: 100%;
   }
-
   .container {
     width: 100%;
     max-width: 100%;
@@ -219,35 +356,24 @@ footer {
     padding: 15px;
     border-radius: 12px;
   }
-
   img {
     width: 70%;
     margin: 15px auto;
   }
-
   ul {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-
   ul li a {
     width: 100%;
-    right: 40%;
+    right: auto; /* Fixed syntax bug from original css */
     text-align: center;
-    position: relative;
   }
-
   p {
     font-size: 20px;
     line-height: 1.5;
-    position: relative;
     margin: 0;
     text-align: center;
-  }
-
-  footer {
-    align-items: center;
-    width: 100%;
   }
 }
