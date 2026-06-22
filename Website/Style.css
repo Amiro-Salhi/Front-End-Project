@@ -207,9 +207,6 @@ input[type=submit]:hover {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Chat Popup Styles */
-/* Button used to open the chat form - fixed at the bottom of the page */
-/* Update the Open button to make text readable */
 .open-button {
   background-color: var(--heading-2);
   color: var(--btn-text-color) !important; /* Forces dark purple text */
@@ -230,14 +227,14 @@ input[type=submit]:hover {
 /* Force dark text color on the close button text inside the form */
 .form-container .cancel {
   background-color: red;
-  color: #ffffff !important; /* Force crisp white text on the red button */
+  color: #ffffff !important; 
   font-weight: bold;
 }
 
 /* Update the Send button style for perfect readability */
 .form-container .btn {
   background-color: var(--heading-2);
-  color: var(--btn-text-color) !important; /* Forces dark purple text in dark mode */
+  color: var(--btn-text-color) !important; 
   padding: 16px 20px;
   border: none;
   cursor: pointer;
@@ -245,14 +242,14 @@ input[type=submit]:hover {
   margin-bottom: 10px;
   opacity: 0.9;
   border-radius: 10px;
-  font-weight: bold; /* Makes the text thick and crisp */
+  font-weight: bold; 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Fix placeholder text contrast for all modern browsers */
 .form-container textarea::placeholder {
-  color: #555555 !important; /* Dark charcoal gray for clear readability */
-  opacity: 1 !important;     /* Overrides browser defaults that fade it out */
+  color: #555555 !important; 
+  opacity: 1 !important;     
 }
 
 /* Fallback for older WebKit browsers (Safari/Chrome) */
@@ -268,7 +265,7 @@ input[type=submit]:hover {
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
-  color: #222222 !important; /* Forceert donkergrijze letters bij het typen */
+  color: #222222 !important; 
   font-size: 16px;
   resize: none;
   min-height: 200px;
@@ -336,9 +333,36 @@ footer {
   background-color: var(--bg-container);
   padding: 10px;
   text-align: center;
-  color: lightseagreen;
+  color: blueviolet;
   transition: background-color 0.3s ease;
+  position: relative; 
 }
+
+/* De container wordt nu in de hoek geplaatst */
+.footer-privacy-container {
+  position: absolute !important;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px; 
+}
+
+/* Stijl voor de links in de container */
+.footer-privacy-container a {
+  color: inherit; 
+  text-decoration: none;
+  font-size: 14px; 
+  transition: color 0.2s ease; 
+}
+
+
+.footer-privacy-container a:hover {
+  color: red !important;
+  text-decoration: underline;
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 480px) {
