@@ -1,79 +1,101 @@
-<html>
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Portfolio.css">
+  <link href="../Tailwind-app/output.css" rel="stylesheet">
+  <script src="Portfolio.js"></script>
+  <link rel="icon" type="image/png" href="../Images/Favicon.png">
+  <title>About Me</title>
+</head>
+
 <body>
 
-    <head>
-        <link rel="stylesheet" href="Portfolio.css">
-        <script src="Tailwind.config.js"></script>
-        <link rel="icon" type="image/png" href=".../Images/Favicon.png"> 
-    </head>
+<nav>  
+  <ul>
+    <li class="font-bold ..."><a href="Index.html">Home</a></li>
+    <li class="font-bold ..."><a href="About.html">About Me</a></li>
+    <li class="font-bold ..."><a href="Projects.html">Projecten</a></li>
+    <li class="font-bold ..."><a href="LinkedIn.html">LinkedIn</a></li>
+    <li class="font-bold ..."><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <title>About Me</title>
+<h1 class="text-3xl font-bold text-blueviolet-500 text-center mt-6">About Me</h1>
 
-    <ul>
-  <li><a href="Index.html">Home</a></li>
-  <li><a href="About.html">About Me</a></li>
-  <li><a href="Projects.html">Projecten</a></li>
-  <li><a href="LinkedIn.html">LinkedIn</a></li>
-  <li><a href="Contact.html">Contact</a></li>
-</ul>
+<img src="../Images/About-Me.png" width="220" alt="">
 
-<h2>About Me</h2>
+<button class="open-button" onclick="openForm()">Chat</button>
 
-<img src="../Images/About-Me.png" width="220px">
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+    <h1 class="font-bold ...">Chat</h1>
 
-<div class="container">
-  <p>Mijn naam is Amiro Salhi en ik ben een gemotiveerde student aan het Techniek College Rotterdam.</p>
-  <p>Ik volg momenteel de opleiding MBO4 Software Developer.</p>
-  <p>Ik heb een sterke interesse in IT en technologie.</p>
-  <p>Mijn doel is om mij verder te ontwikkelen tot een professionele IT-specialist.</p>
+    <label><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
 </div>
 
 <div class="container">
-  <p>Ik heb een opleiding gevolgd binnen IT Systems and Devices aan het Techniek College Rotterdam.</p>
-  <p>Tijdens deze opleiding heb ik een brede basis gelegd in IT-systemen en technologie.</p>
-  <p>Daarnaast heb ik kennis opgedaan op het gebied van bedrijfsbeheer en administratieve processen.</p>
-  <p>Deze combinatie geeft mij een veelzijdige basis binnen de IT-sector.</p>
+  <p id="demo2" class="font-bold ..."></p>
+  <p class="font-bold ...">Mijn naam is Amiro Salhi en ik ben een gemotiveerde student aan het Techniek College Rotterdam.</p>
+  <p class="font-bold ...">Ik volg momenteel de opleiding MBO4 Software Developer.</p>
+  <p class="font-bold ...">Ik heb een sterke interesse in IT en technologie.</p>
+  <p class="font-bold ...">Mijn doel is om mij verder te ontwikkelen tot een professionele IT-specialist.</p>
 </div>
 
 <div class="container">
-  <p>Ik beheers meerdere talen die mij helpen effectief te communiceren in verschillende situaties.</p> 
-  <p>Nederlands en Engels beheers ik op een goed niveau, zowel mondeling als schriftelijk.</p>
-  <p>Deze taalvaardigheid stelt mij in staat om samen te werken in diverse omgevingen.</p>
-  <p>Ik blijf mijn communicatieve vaardigheden verder ontwikkelen om professioneel te blijven groeien.</p>
-</div>
-
-<img src="../Images/Me.jpg" width="220px">
-
-<div class="container">
-  <p>Ik heb praktijkervaring opgedaan tijdens meerdere stages binnen verschillende organisaties.</p>
-  <p>Zo heb ik gewerkt bij de servicedesk van Zadkine, waar ik gebruikers heb ondersteund.</p>
-  <p>Daarnaast heb ik stagegelopen bij SIPOR en een basisschool in Rotterdam.</p>
-  <p>Tijdens deze ervaringen heb ik mijn communicatieve en technische vaardigheden verder ontwikkeld.</p>
+  <p class="font-bold ...">Ik heb een opleiding gevolgd binnen IT Systems and Devices aan het Techniek College Rotterdam.</p>
+  <p class="font-bold ...">Tijdens deze opleiding heb ik een brede basis gelegd in IT-systemen en technologie.</p>
+  <p class="font-bold ...">Daarnaast heb ik kennis opgedaan op het gebied van bedrijfsbeheer en administratieve processen.</p>
+  <p class="font-bold ...">Deze combinatie geeft mij een veelzijdige basis binnen de IT-sector.</p>
 </div>
 
 <div class="container">
-  <p>Ik beheers programmeertalen zoals HTML en CSS.</p>
-  <p>Momenteel ben ik bezig met het leren van JavaScript om mijn kennis verder uit te breiden.</p>
-  <p>Ik richt mij op het ontwikkelen van websites en applicaties.</p>
-  <p>Mijn technische vaardigheden blijven zich voortdurend ontwikkelen door studie en praktijkervaring.</p>
+  <p class="font-bold ...">Ik beheers meerdere talen die mij helpen effectief te communiceren in verschillende situaties.</p> 
+  <p class="font-bold ...">Nederlands en Engels beheers ik op een goed niveau, zowel mondeling als schriftelijk.</p>
+  <p class="font-bold ...">Deze taalvaardigheid stelt mij in staat om samen te werken in diverse omgevingen.</p>
+  <p class="font-bold ...">Ik blijf mijn communicatieve vaardigheden verder ontwikkelen om professioneel te blijven groeien.</p>
+</div>
+
+<img src="../Images/Me.jpg" width="220" alt="">
+
+<div class="container">
+  <p class="font-bold ...">Ik heb praktijkervaring opgedaan tijdens meerdere stages binnen verschillende organisaties.</p>
+  <p class="font-bold ...">Zo heb ik gewerkt bij de servicedesk van Zadkine, waar ik gebruikers heb ondersteund.</p>
+  <p class="font-bold ...">Daarnaast heb ik stagegelopen bij SIPOR en een basisschool in Rotterdam.</p>
+  <p class="font-bold ...">Tijdens deze ervaringen heb ik mijn communicatieve en technische vaardigheden verder ontwikkeld.</p>
 </div>
 
 <div class="container">
-  <p>Ik heb verschillende certificaten behaald, waaronder een Pressure Cooker certificaat via Digiwerkplaats Rijnmond.</p> 
-  <p>Daarnaast heb ik deelgenomen aan het MDT Treasure Hunt programma van Netwerk Nieuw Rotterdam.</p>
-  <p>Deze ervaringen hebben mij geholpen om mijn vaardigheden in een sociaalgerichte omgeving te verbeteren.</p>
-  <p>Ik blijf actief zoeken naar mogelijkheden om mij verder te ontwikkelen binnen mijn vakgebied.</p>
+  <p class="font-bold ...">Ik beheers programmeertalen zoals HTML en CSS.</p>
+  <p class="font-bold ...">Momenteel ben ik bezig met het leren van JavaScript om mijn kennis verder uit te breiden.</p>
+  <p class="font-bold ...">Ik richt mij op het ontwikkelen van websites en applicaties.</p>
+  <p class="font-bold ...">Mijn technische vaardigheden blijven zich voortdurend ontwikkelen door studie en praktijkervaring.</p>
 </div>
 
 <div class="container">
-  <p>Ik ben een leergierige en gemotiveerde persoon met een sterke interesse in technologie en IT.</p>
-  <p>Ik werk gestructureerd en neem verantwoordelijkheid voor mijn taken.</p>
-  <p>Daarnaast ben ik sociaal vaardig en kan ik goed samenwerken met anderen.</p>
-  <p>Mijn ambitie is om mij continu te ontwikkelen en waarde toe te voegen binnen mijn vakgebied.</p>
+  <p class="font-bold ...">Ik heb verschillende certificaten behaald, waaronder een Pressure Cooker certificaat via Digiwerkplaats Rijnmond.</p> 
+  <p class="font-bold ...">Daarnaast heb ik deelgenomen aan het MDT Treasure Hunt programma van Netwerk Nieuw Rotterdam.</p>
+  <p class="font-bold ...">Deze ervaringen hebben mij geholpen om mijn vaardigheden in een sociaalgerichte omgeving te verbeteren.</p>
+  <p class="font-bold ...">Ik blijf actief zoeken naar mogelijkheden om mij verder te ontwikkelen binnen mijn vakgebied.</p>
 </div>
 
+<div class="container">
+  <p class="font-bold ...">Ik ben een leergierige en gemotiveerde persoon met een sterke interesse in technologie en IT.</p>
+  <p class="font-bold ...">Ik werk gestructureerd en neem verantwoordelijkheid voor mijn taken.</p>
+  <p class="font-bold ...">Daarnaast ben ik sociaal vaardig en kan ik goed samenwerken met anderen.</p>
+  <p class="font-bold ...">Mijn ambitie is om mij continu te ontwikkelen en waarde toe te voegen binnen mijn vakgebied.</p>
+</div>
+
+<script src="Portfolio2.js"></script>
 <footer>
-  <p>©Amiro Salhi</p>
+  <p class="font-bold ...">©Amiro Salhi</p>
 </footer>
 </body>
 </html>

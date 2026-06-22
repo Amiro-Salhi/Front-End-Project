@@ -1,79 +1,108 @@
-<html>
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Portfolio.css">
+  <link href="../Tailwind-app/output.css" rel="stylesheet">
+  <script src="Portfolio.js"></script>
+  <link rel="icon" type="image/png" href="../Images/Favicon.png">
+  <title>LinkedIn</title>
+</head>
+
 <body>
 
-    <head>
-        <link rel="stylesheet" href="Portfolio.css">
-        <script src="Tailwind.config.js"></script>
-        <link rel="icon" type="image/png" href=".../Images/Favicon.png">  
-    </head>
 
-    <title>LinkedIn</title>
 
-    <ul>
-  <li><a href="Index.html">Home</a></li>
-  <li><a href="About.html">About Me</a></li>
-  <li><a href="Projects.html">Projecten</a></li>
-  <li><a href="LinkedIn.html">LinkedIn</a></li>
-  <li><a href="Contact.html">Contact</a></li>
-</ul>
+<nav>  
+  <ul>
+    <li class="font-bold ..."><a href="Index.html">Home</a></li>
+    <li class="font-bold ..."><a href="About.html">About Me</a></li>
+    <li class="font-bold ..."><a href="Projects.html">Projecten</a></li>
+    <li class="font-bold ..."><a href="LinkedIn.html">LinkedIn</a></li>
+    <li class="font-bold ..."><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-<h2>LinkedIn</h2>
+<h1 class="text-3xl font-bold text-blueviolet-500 text-center mt-6">LinkedIn</h1>
 
-<img src="../Images/Linkedin(1).png" width="220px">
+<img src="../Images/Linkedin(1).png" width="220" alt="">
 
-<div class="container">
-  <p>Op deze pagina kunt u linkjes vinden naar mijn LinkedIn Profiel!!</p>
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+    <h1 class="font-bold ...">Chat</h1>
+
+    <label><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
 </div>
 
 <div class="container">
-  <p>Via mijn LinkedIn-profiel bouw ik actief aan een professioneel netwerk binnen de IT-sector.</p>
-  <p>Ik verbind mij met professionals, studenten en organisaties die dezelfde interesses delen.</p>
-  <p>Deze connecties bieden waardevolle inzichten en kansen voor groei.</p>
-  <p>Ontdek mijn netwerk en zie hoe ik mij positioneer binnen het vakgebied.</p>
+  <p id="demo2" class="font-bold ..."></p>
+  <p class="font-bold ...">Op deze pagina kunt u linkjes vinden naar mijn LinkedIn Profiel!!</p>
 </div>
 
 <div class="container">
-  <p>Een van de vele LinkedIn linkjes:</p>
-  <p><a href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Neem een kijkje op mijn LinkedIn-profiel</a></p>
+  <p class="font-bold ...">Via mijn</p><a class="underline" class="text-lightblue-600 after:content-['_↗']" href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+LinkedIn-Profiel</a><p class="font-bold ...">bouw ik actief aan een professioneel netwerk binnen de IT-sector.</p>
+  <p class="font-bold ...">Ik verbind mij met professionals, studenten en organisaties die dezelfde interesses delen.</p>
+  <p class="font-bold ...">Deze connecties bieden waardevolle inzichten en kansen voor groei.</p>
+  <p class="font-bold ...">Ontdek mijn netwerk en zie hoe ik mij positioneer binnen het vakgebied.</p>
+</div>
+
+<div class="container">
+  <p class="font-bold ...">Een van de vele LinkedIn linkjes:</p>
+  <p><a class="underline"  href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Neem een kijkje op mijn LinkedIn-profiel</a></p>
 </div>
 
 
 <div class="container">
-  <p>Op mijn LinkedIn-profiel deel ik mijn voortgang en ontwikkeling als IT-student.</p>
-  <p>Hier worden mijn nieuwste vaardigheden, projecten en leerervaringen bijgehouden.</p> 
-  <p>Het platform geeft een actueel beeld van mijn groei en ambities.</p>
-  <p>Bezoek mijn profiel om mijn professionele reis te volgen.</p>
+  <p class="font-bold ...">Op mijn</p><a class="underline" class="text-lightblue-600 after:content-['_↗']" href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+LinkedIn-Profiel</a><p class="font-bold ...">deel ik mijn voortgang en ontwikkeling als IT-student.</p>
+  <p class="font-bold ...">Hier worden mijn nieuwste vaardigheden, projecten en leerervaringen bijgehouden.</p> 
+  <p class="font-bold ...">Het platform geeft een actueel beeld van mijn groei en ambities.</p>
+  <p class="font-bold ...">Bezoek mijn profiel om mijn professionele reis te volgen.</p>
 </div>
 
 <a href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios"><img src="../Images/LinkedIn.jpg" alt="HTML tutorial" style="width:220px;"></a>
 
 <div class="container">
-  <p>Mijn LinkedIn-profiel geeft een uitgebreid overzicht van mijn werkervaring en behaalde certificaten.</p>
-  <p>Hier zijn mijn stages en praktische ervaringen duidelijk weergegeven.</p>
-  <p>Ook deel ik hier mijn prestaties en mijlpalen binnen mijn carrière.</p>
-  <p>Neem een kijkje om een volledig beeld te krijgen van mijn achtergrond.</p>
+  <p class="font-bold ...">Mijn</p><a class="underline" class="text-lightblue-600 after:content-['_↗']" href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+LinkedIn-Profiel</a><p class="font-bold ...">geeft een uitgebreid overzicht van mijn werkervaring en behaalde certificaten.</p>
+  <p class="font-bold ...">Hier zijn mijn stages en praktische ervaringen duidelijk weergegeven.</p>
+  <p class="font-bold ...">Ook deel ik hier mijn prestaties en mijlpalen binnen mijn carrière.</p>
+  <p class="font-bold ...">Neem een kijkje om een volledig beeld te krijgen van mijn achtergrond.</p>
 </div>
 
 <div class="container">
-  <p>Op LinkedIn presenteer ik mijn belangrijkste vaardigheden en technische kennis.</p>
-  <p>Van netwerken tot webontwikkeling, mijn expertise wordt hier overzichtelijk weergegeven.</p>
-  <p>Mijn profiel laat zien waar mijn sterke punten liggen en hoe ik mij onderscheid.</p>
-  <p>Ontdek welke kwaliteiten ik meebreng in een professionele omgeving.</p>
+  <p class="font-bold ...">Op</p><a class="underline" class="text-lightblue-600 after:content-['_↗']" href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+LinkedIn</a><p class="font-bold ...">presenteer ik mijn belangrijkste vaardigheden en technische kennis.</p>
+  <p class="font-bold ...">Van netwerken tot webontwikkeling, mijn expertise wordt hier overzichtelijk weergegeven.</p>
+  <p class="font-bold ...">Mijn profiel laat zien waar mijn sterke punten liggen en hoe ik mij onderscheid.</p>
+  <p class="font-bold ...">Ontdek welke kwaliteiten ik meebreng in een professionele omgeving.</p>
 </div>
 
 <div class="container">
-  <p><a href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Bekijk mijn LinkedIn-profiel en ontdek mijn ervaring</a></p>
+  <p><a class="underline" href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Bekijk mijn LinkedIn-profiel en ontdek mijn ervaring</a></p>
 </div>
 
 <div class="container">
-  <p>Mijn LinkedIn is dé plek om in contact te blijven en samenwerkingsmogelijkheden te verkennen.</p>
-  <p>Ik sta open voor nieuwe connecties en professionele kansen.</p>
-  <p>Door mijn profiel te bekijken, krijgt u een beter beeld van wie ik ben en wat ik kan.</p>
-  <p>Ik nodig u uit om mij te volgen en contact met mij op te nemen.</p>
+  <p><a class="underline" class="text-lightblue-600 after:content-['_↗']" href="https://www.linkedin.com/in/amiro-salhi-330854231?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+Mijn LinkedIn</a><p class="font-bold ...">is dé plek om in contact te blijven en samenwerkingsmogelijkheden te verkennen.</p>
+  <p class="font-bold ...">Ik sta open voor nieuwe connecties en professionele kansen.</p>
+  <p class="font-bold ...">Door mijn profiel te bekijken, krijgt u een beter beeld van wie ik ben en wat ik kan.</p>
+  <p class="font-bold ...">Ik nodig u uit om mij te volgen en contact met mij op te nemen.</p>
 </div>
 
+<script src="Portfolio2.js"></script>
 <footer>
-  <p>©Amiro Salhi</p>
+  <p class="font-bold ...">©Amiro Salhi</p>
 </footer>
 </body>
 </html>

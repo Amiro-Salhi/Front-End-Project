@@ -1,63 +1,90 @@
-<html>
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Portfolio.css">
+  <link href="../Tailwind-app/output.css" rel="stylesheet">
+  <script src="Portfolio.js"></script>
+  <link rel="icon" type="image/png" href="../Images/Favicon.png">
+  <title>Projecten</title>
+</head>
+
 <body>
 
-    <head>
-        <link rel="stylesheet" href="Portfolio.css">
-        <script src="Tailwind.config.js"></script>
-        <link rel="icon" type="image/png" href=".../Images/Favicon.png"> 
-    </head>
+<nav>  
+  <ul>
+    <li class="font-bold ..."><a href="Index.html">Home</a></li>
+    <li class="font-bold ..."><a href="About.html">About Me</a></li>
+    <li class="font-bold ..."><a href="Projects.html">Projecten</a></li>
+    <li class="font-bold ..."><a href="LinkedIn.html">LinkedIn</a></li>
+    <li class="font-bold ..."><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <title>Projecten</title>
+<h1 class="text-3xl font-bold text-blueviolet-500 text-center mt-6">Projecten</h1>
 
-    <ul>
-  <li><a href="Index.html">Home</a></li>
-  <li><a href="About.html">About Me</a></li>
-  <li><a href="Projects.html">Projecten</a></li>
-  <li><a href="LinkedIn.html">LinkedIn</a></li>
-  <li><a href="Contact.html">Contact</a></li>
-</ul>
+<img src="../Images/Projects.png" width="220" alt="">
 
-<h2>Projecten</h2>
+<button class="open-button" onclick="openForm()">Chat</button>
 
-<img src="../Images/Projects.png" width="220px">
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+    <h1 class="font-bold ...">Chat</h1>
 
-<div class="container">
-  <p>Op deze pagina vindt u een overzicht van mijn webprojecten.</p>
-  <p>Elk project is ontwikkeld met aandacht voor kwaliteit en gebruiksvriendelijkheid.</p>
-  <p>Ik heb hierbij gewerkt aan zowel functionaliteit als design.</p>
-  <p>Deze projecten geven een goed beeld van mijn vaardigheden als ontwikkelaar.</p>
+    <label><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
 </div>
 
 <div class="container">
-  <p>Bij het ontwikkelen van websites werk ik gestructureerd en doelgericht.</p>
-  <p>Ik begin met een duidelijk plan en zet dit om in een functioneel ontwerp.</p>
-  <p>Vervolgens werk ik dit uit met behulp van moderne webtechnologieën.</p>
-  <p>Hierbij let ik op overzicht, prestaties en gebruikservaring.</p>
+  <p id="demo2" class="font-bold ..."></p>
+  <p class="font-bold ...">Op deze pagina vindt u een overzicht van mijn webprojecten.</p>
+  <p class="font-bold ...">Elk project is ontwikkeld met aandacht voor kwaliteit en gebruiksvriendelijkheid.</p>
+  <p class="font-bold ...">Ik heb hierbij gewerkt aan zowel functionaliteit als design.</p>
+  <p class="font-bold ...">Deze projecten geven een goed beeld van mijn vaardigheden als ontwikkelaar.</p>
 </div>
 
 <div class="container">
-  <p>Elk project draagt bij aan mijn ontwikkeling als software developer.</p>
-  <p>Door praktijkervaring verbeter ik continu mijn technische en creatieve vaardigheden.</p>
-  <p>Ik leer van elke uitdaging en pas deze kennis toe in nieuwe projecten.</p>
-  <p>Hierdoor blijft mijn portfolio zich steeds verder ontwikkelen.</p>
+  <p class="font-bold ...">Bij het ontwikkelen van websites werk ik gestructureerd en doelgericht.</p>
+  <p class="font-bold ...">Ik begin met een duidelijk plan en zet dit om in een functioneel ontwerp.</p>
+  <p class="font-bold ...">Vervolgens werk ik dit uit met behulp van moderne webtechnologieën.</p>
+  <p class="font-bold ...">Hierbij let ik op overzicht, prestaties en gebruikservaring.</p>
 </div>
 
 <div class="container">
-  <p>In mijn projecten streef ik naar innovatieve en creatieve oplossingen.</p>
-  <p>Ik combineer technische kennis met een oog voor modern design.</p>
-  <p>Elk project wordt met zorg uitgewerkt om een professionele uitstraling te garanderen.</p>
-  <p>Ik blijf experimenteren en nieuwe technieken toepassen om mijn werk continu te verbeteren.</p>
+  <p class="font-bold ...">Elk project draagt bij aan mijn ontwikkeling als software developer.</p>
+  <p class="font-bold ...">Door praktijkervaring verbeter ik continu mijn technische en creatieve vaardigheden.</p>
+  <p class="font-bold ...">Ik leer van elke uitdaging en pas deze kennis toe in nieuwe projecten.</p>
+  <p class="font-bold ...">Hierdoor blijft mijn portfolio zich steeds verder ontwikkelen.</p>
 </div>
 
 <div class="container">
-  <p>Ik ben continu bezig met het ontwikkelen van nieuwe projecten om mijn portfolio verder uit te breiden.</p> 
-  <p>Hierbij richt ik mij op het verbeteren van mijn technische vaardigheden en het toepassen van nieuwe technologieën.</p>
-  <p>Toekomstige projecten zullen zich meer richten op interactiviteit en gebruikservaring.</p>
-  <p>Blijf deze pagina volgen om mijn nieuwste werk te ontdekken.</p>
+  <p class="font-bold ...">In mijn projecten streef ik naar innovatieve en creatieve oplossingen.</p>
+  <p class="font-bold ...">Ik combineer technische kennis met een oog voor modern design.</p>
+  <p class="font-bold ...">Elk project wordt met zorg uitgewerkt om een professionele uitstraling te garanderen.</p>
+  <p class="font-bold ...">Ik blijf experimenteren en nieuwe technieken toepassen om mijn werk continu te verbeteren.</p>
 </div>
 
+<div class="container">
+  <p class="font-bold ...">Ik ben continu bezig met het ontwikkelen van nieuwe projecten om mijn portfolio verder uit te breiden.</p> 
+  <p class="font-bold ...">Hierbij richt ik mij op het verbeteren van mijn technische vaardigheden en het toepassen van nieuwe technologieën.</p>
+  <p class="font-bold ...">Toekomstige projecten zullen zich meer richten op interactiviteit en gebruikservaring.</p>
+  <p class="font-bold ...">Blijf deze pagina volgen om mijn nieuwste werk te ontdekken.</p>
+</div>
+
+<div class="container">
+  <p class="font-bold ...">Countdown tot mijn eerste stage dag in het derde jaar:</p>
+  <p class="demo" id="demo"></p>
+</div>
+
+<script src="Portfolio2.js"></script>
 <footer>
-  <p>©Amiro Salhi</p>
+  <p class="font-bold ...">©Amiro Salhi</p>
 </footer>
 </body>
 </html>
